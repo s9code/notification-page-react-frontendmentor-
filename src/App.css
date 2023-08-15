@@ -1,1 +1,53 @@
+.App {
+    background-color: hsl(0, 0%, 100%);
+    width: 375px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.contenedor-principal{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.contenedor-principal h1{
+    display: flex;
+    font-size: 1.2em;
+}
+
+.contenedor-principal p{
+    font-size: 0.9em;
+    color: hsl(219, 12%, 42%);
+}
+
+.general {
+    display: flex;
+    flex-direction: column;
+}
+
+.usuario {
+    margin-bottom: 20px;
+    padding: 12px 0 12px 12px;
+    border-radius: 10px;
+}
+
+.no-leidc {
+    background-color: hsl(207, 60%, 97%);
+}
+
+.comentario{
+    width: 250px;
+    font-size: 0.9em;
+    color: hsl(219, 12%, 42%);
+    margin-top: 10px;
+    border: 1px solid hsl(205, 33%, 90%);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.usuario-imagen{
+    display: flex;
+}

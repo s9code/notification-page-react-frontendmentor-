@@ -1,0 +1,34 @@
+.contenedor-usuarios {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+}
+
+.contenedor-usuarios img {
+    width: 40px;
+    height: 40px;
+    padding-right: 10px;
+}
+
+.nombre-usuario {
+    padding-right: 5px;
+    display: inline-block;
+    color: hsl(224, 21%, 14%);
+}
+
+.notificacion-ususario {
+    display: inline;
+    color: hsl(219, 12%, 42%);
+}
+
+.fecha-usuario {
+    color: hsl(219, 14%, 63%);
+}
+
+.contenedor-texto-usuarios p {
+    font-size: 0.85em;
+}
+
+.grupo {
+    color: hsl(219, 85%, 26%);
+}
