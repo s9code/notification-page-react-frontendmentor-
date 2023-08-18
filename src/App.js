@@ -1,38 +1,48 @@
 import './App.css';
 import Usuarios from './componentes/Usuarios';
+import Boton from './componentes/Boton';
+
 
 function App() {
+
   return (
     <div className="App">
-      <div className='contenedor-principal'>
-        <h1>Notifications</h1>
+      
+      <div className='contenedor-principal' id>
+        <div className='contenedor-notificacion'>
+          <h1>Notifications</h1>
+          <Boton />
+        </div>
         <p>Mark all as read</p>
       </div>
 
       <div className='contenedor-usuarios'>
         <div className='general'>
 
-          <div className='usuario no-leidc'>
-            <Usuarios 
+          <div className='usuario no-leidc aviso'>
+            <Usuarios
             nombre= 'Mark Webber' 
             imagen ='mark-webber'
             notificacion ='reacted to your recent post '
             texto = 'My first tournament today!'
+            punto = {<p className='punto-rojo'></p>}
             fecha = '1m'/>
           </div>
-          <div className='usuario no-leidc'>
+          <div className='usuario no-leidc aviso'>
             <Usuarios 
             nombre= 'Angela Gray' 
             imagen ='angela-gray'
             notificacion ='followed you'
+            punto = {<p className='punto-rojo'></p>}
             fecha = '5m'/>
           </div>
-          <div className='usuario no-leidc'>
+          <div className='usuario no-leidc aviso'>
             <Usuarios 
             nombre= 'Jacob thompson' 
             imagen ='jacob-thompson'
             notificacion ='has joined your group '
             grupo = 'Chess Club'
+            punto = {<p className='punto-rojo'></p>}
             fecha = '1 day'
             />
           </div>

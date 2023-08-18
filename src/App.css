@@ -4,28 +4,31 @@
     font-family: 'Plus Jakarta Sans', sans-serif;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
 .contenedor-principal{
+    display: flex;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.contenedor-notificacion {
     display: flex;
+    padding-right: 90px;
+
 }
 
 .contenedor-principal h1{
-    display: flex;
+    padding-right: 10px;
     font-size: 1.2em;
 }
 
 .contenedor-principal p{
     font-size: 0.9em;
     color: hsl(219, 12%, 42%);
-}
-
-.general {
-    display: flex;
-    flex-direction: column;
+    cursor: pointer;
 }
 
 .usuario {
@@ -39,15 +42,25 @@
 }
 
 .comentario{
-    width: 250px;
+    width: 200px;
+    margin-left: 50px;
     font-size: 0.9em;
     color: hsl(219, 12%, 42%);
     margin-top: 10px;
     border: 1px solid hsl(205, 33%, 90%);
     border-radius: 10px;
-    padding: 20px;
+    padding: 20px 30px 20px 20px;
+    cursor: pointer;
+}
+
+.comentario:hover{
+    background-color: hsl(205, 33%, 90%)
 }
 
 .usuario-imagen{
     display: flex;
+}
+
+.usuario-imagen img {
+    cursor: pointer;
 }
