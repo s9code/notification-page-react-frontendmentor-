@@ -1,19 +1,31 @@
+import { useState } from 'react';
 import './App.css';
 import Usuarios from './componentes/Usuarios';
-import Boton from './componentes/Boton';
 
 
-function App() {
+
+function App({onChangeColor}) {
+
+  const [clicks, setClicks] = useState(3);
+  const [aplicarClase, setAplicarClase] = useState(false);
+
+  function handleClickOutside() {
+    setClicks(c => 0)
+    setAplicarClase(!aplicarClase);
+  }
+
 
   return (
     <div className="App">
       
-      <div className='contenedor-principal' id>
+      <div className='contenedor-principal'>
         <div className='contenedor-notificacion'>
           <h1>Notifications</h1>
-          <Boton />
+          <button className="boton">
+            <p>{clicks}</p>
+          </button>
         </div>
-        <p>Mark all as read</p>
+        <button className='boton-leido' onClick={handleClickOutside}>Mark all as read</button>
       </div>
 
       <div className='contenedor-usuarios'>
@@ -25,7 +37,7 @@ function App() {
             imagen ='mark-webber'
             notificacion ='reacted to your recent post '
             texto = 'My first tournament today!'
-            punto = {<p className='punto-rojo'></p>}
+            punto = {<p className={aplicarClase ? 'punto-vacio' : 'punto-rojo'}></p>}
             fecha = '1m'/>
           </div>
           <div className='usuario no-leidc aviso'>
@@ -33,7 +45,7 @@ function App() {
             nombre= 'Angela Gray' 
             imagen ='angela-gray'
             notificacion ='followed you'
-            punto = {<p className='punto-rojo'></p>}
+            punto = {<p className={aplicarClase ? 'punto-vacio' : 'punto-rojo'}></p>}
             fecha = '5m'/>
           </div>
           <div className='usuario no-leidc aviso'>
@@ -42,7 +54,7 @@ function App() {
             imagen ='jacob-thompson'
             notificacion ='has joined your group '
             grupo = 'Chess Club'
-            punto = {<p className='punto-rojo'></p>}
+            punto = {<p className={aplicarClase ? 'punto-vacio' : 'punto-rojo'}></p>}
             fecha = '1 day'
             />
           </div>

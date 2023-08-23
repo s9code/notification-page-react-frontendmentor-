@@ -39,10 +39,20 @@
     color: hsl(219, 85%, 26%);
 }
 
-.punto-rojo {
+.punto-vacio {
     width: 8px;
     height: 8px;
     background-color: hsl(1, 90%, 64%);
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px;
+    display: none;
+}
+
+.punto-rojo {
+    width: 8px;
+    height: 8px;
+    background-color:hsl(1, 90%, 64%);
     border-radius: 50%;
     display: inline-block;
     margin-left: 5px;
